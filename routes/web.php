@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CustomController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\ProfileController;
@@ -20,6 +21,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/authors/{author}',[AuthorController::class, 'showBooks'])->name('author.books');
     Route::get('/genres/{genre}',[GenreController::class, 'showGenre'])->name('genre.books');
     Route::get('/publishers/{publisher}', [PublisherController::class, 'showBooks'])->name('publisher.books');
+    Route::get('/create', [BookController::class, 'create'])->name('books.create');
+    Route::post('/books', [BookController::class, 'store'])->name('books.store');
+
 });
 
 

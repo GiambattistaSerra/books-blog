@@ -42,6 +42,9 @@ class CustomController extends Controller
 
         return view('custom.show', compact('book', 'comments'));
     }
+
+
+
 }
 
 

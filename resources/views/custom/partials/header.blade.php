@@ -9,6 +9,9 @@
                 <ul class="navbar-nav ml-auto">
                     @auth
                         <li class="nav-item">
+                            <a href="{{ route('books.create') }}" class="btn btn-primary mx-3">Share Your Books</a>
+                        </li>
+                        <li class="nav-item">
                             <span class="navbar-text text-white me-2">{{ Auth::user()->name }}</span>
                         </li>
                         <li class="nav-item">
